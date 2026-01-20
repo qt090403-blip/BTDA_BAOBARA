@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}    
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+} 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 3px solid #4CAF50;
+    min-height: calc(100vh - 80px);
+} 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+.animal-card {
+    border: 3px solid #333;
+    background-color: white;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}     
+.animal-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.animal-image {
+    width: 100%;
+    height: 180px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 50px;
+    overflow: hidden;
+}
+.animal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.animal-name {
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #000000;
+}
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
